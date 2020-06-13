@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <title>Monticello</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header__nav-box nav-box container">
+        <div class="nav-box__icon-box">
+          <img src="images/Logo.png" alt="logo" />
+        </div>
+        <nav class="nav-box__nav">
+          <ul class="nav-box__nav-list">
+            <li class="nav-box__nav-item">
+              <a class="nav-box__link" href="#description">
+                <div class="nav-box__circle"></div>
+                <span class="nav-box__page-name">ABOUT US</span></a
+              >
+            </li>
+            <li class="nav-box__nav-item">
+              <a class="nav-box__link" href="#commerce">
+                <div class="nav-box__circle"></div>
+                <span class="nav-box__page-name">PROJECTS</span></a
+              >
+            </li>
+            <li class="nav-box__nav-item">
+              <a class="nav-box__link" href="#news">
+                <div class="nav-box__circle"></div>
+                <span class="nav-box__page-name">NEWS</span></a
+              >
+            </li>
+            <li class="nav-box__nav-item">
+              <a class="nav-box__link" href="#footer">
+                <div class="nav-box__circle"></div>
+                <span class="nav-box__page-name">CONTACT</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="nav-box__icons-list">
+          <li class="nav-box__icon">
+            <a class="nav-box__ico-link" href="#">
+              <img src="images/fb-logo.png" alt="img"
+            /></a>
+          </li>
+          <li class="nav-box__icon">
+            <a class="nav-box__ico-link" href="#">
+              <img src="images/twitter-logo.png" alt="img"
+            /></a>
+          </li>
+          <li class="nav-box__icon">
+            <a class="nav-box__ico-link" href="#">
+              <img src="images/insta-logo.png" alt="img"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header__title-box container">
+        <ul class="header__slider-list">
+          <li id="circle-1" class="header__slider-circle active"></li>
+          <li id="circle-2" class="header__slider-circle"></li>
+          <li id="circle-3" class="header__slider-circle"></li>
+          <li id="circle-4" class="header__slider-circle"></li>
+          <li id="circle-5" class="header__slider-circle"></li>
+        </ul>
+        <h1 class="header__title">Simple & mordern</h1>
+        <h2 class="header__subtitle">
+          We make the world's beautiful every day
+        </h2>
+
+        <div id="arrow" class="header__arrow">
+          <img id="arrow-dir" src="images/arrow-down.png" alt="arrow-ico" />
+        </div>
+      </div>
+    </header>
+    <section id="description" class="description">
+      <h2 class="description__title">WHAT WE DO</h2>
+      <div class="description__content-wrapper container">
+        <div class="description__image-box">
+          <div class="description__bg-box"></div>
+          <img
+            src="images/description-image.jpg"
+            alt="image"
+            class="description__image"
+          />
+        </div>
+        <div class="description__content-box content-box">
+          <span class="content-box__content-subtitle">ONE WORLD</span>
+          <h2 class="content-box__content-title">Trade Center</h2>
+          <span class="content-box__text"
+            >Increasing prosperity in our lives can be accomplished by having
+            the right frame of mind. The truth is, our thoughts are very
+            powerful.</span
+          >
+          <div class="content-box__button button">MORE DETAILS</div>
+          <div class="content-box-ico-wrapper">
+            <img
+              src="images/description-ico.png"
+              alt=""
+              class="content-box__ico"
+            />
+            <span class="content-box__location"
+              >New York City, United States - 1776 feet</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="commerce" class="commerce">
+      <div class="commerce__box container">
+        <div class="commerce__content-box content-box">
+          <span class="content-box__content-subtitle">INTERNATIONAL</span>
+          <h2 class="content-box__content-title">COMMERCE CENTRE</h2>
+          <span class="content-box__text"
+            >Successful businesses have many things in common, today we’ll look
+            at the big ‘R’ of recognition and how a digital advertising network
+            may help.</span
+          >
+          <div class="content-box__button button">MORE DETAILS</div>
+          <div class="content-box-ico-wrapper">
+            <img
+              src="images/description-ico.png"
+              alt=""
+              class="content-box__ico"
+            />
+            <span class="content-box__location">Hong Kong - 1588 Feet</span>
+          </div>
+        </div>
+        <div class="commerce__image-box">
+          <div class="commerce__bg-box"></div>
+          <img
+            src="images/commerce-bg.jpg"
+            alt="image"
+            class="commerce__image"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="news" class="news">
+      <h2 class="news__main-title">LATEST NEWS</h2>
+      <div class="glide slider__glide container">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <div class="glide__slide-info slide-info">
+                <img
+                  src="images/news-1.jpg"
+                  alt="slide-image"
+                  class="slide-info__image"
+                />
+                <h2 class="slide-info__title">
+                  See The Unmatched Beauty Of The Great.
+                </h2>
+                <span class="slide-info__text"
+                  >Free directories: directories are perfect for customers that
+                  are... searching for</span
+                >
+                <div class="slide-info__profile-box">
+                  <img src="images/news-ico-1.png" alt="profile-ico" />
+                  <div class="slide-info__name-box">
+                    <h2 class="slide-info__name">ISAAC DUNN</h2>
+                    <span class="slide-info__date">09 Feb 2017</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="glide__slide-info slide-info">
+                <img
+                  src="images/news-2.jpg"
+                  alt="slide-image"
+                  class="slide-info__image"
+                />
+                <h2 class="slide-info__title">
+                  Effective Advertising Pointers.
+                </h2>
+                <span class="slide-info__text"
+                  >Having a home based business is a wonderful asset to your
+                  life...
+                </span>
+                <div class="slide-info__profile-box">
+                  <img src="images/new-ico-2.png" alt="profile-ico" />
+                  <div class="slide-info__name-box">
+                    <h2 class="slide-info__name">Dominic Freeman</h2>
+                    <span class="slide-info__date">24 Apr 2017</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="glide__slide-info slide-info">
+                <img
+                  src="images/news-3.jpg"
+                  alt="slide-image"
+                  class="slide-info__image"
+                />
+                <h2 class="slide-info__title">
+                  Hypnotize Yourself Into The Ghost.
+                </h2>
+                <span class="slide-info__text"
+                  >There are many things that are important to catalog
+                  design....
+                </span>
+                <div class="slide-info__profile-box">
+                  <img src="images/news-ico-3.png" alt="profile-ico" />
+                  <div class="slide-info__name-box">
+                    <h2 class="slide-info__name">Alice Ward</h2>
+                    <span class="slide-info__date">30 Dec 2017</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <div class="glide__arrow glide__arrow--left" v data-glide-dir="<">
+            <img src="images/arrow-down.png" alt="arrow-ico" />
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <div class="glide__arrow glide__arrow--right" v data-glide-dir=">">
+              <img src="images/arrow-down.png" alt="arrow-ico" />
+            </div>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery" class="gallery">
+      <h2 class="gallery__title">GALLERY</h2>
+      <div class="gallery__grid grid">
+        <div class="grid__big-img">
+          <img
+            class="grid__big-image"
+            src="images/gallery-big.jpg"
+            alt="image"
+          />
+        </div>
+        <div class="grid__big-box">
+          <div class="grid__row">
+            <div class="grid__image-small">
+              <img
+                class="grid__image-s"
+                src="images/gallery-s-1.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="grid__image-small">
+              <img
+                class="grid__image-s"
+                src="images/gallery-s-2.jpg"
+                alt="img"
+              />
+            </div>
+          </div>
+          <div class="grid__row">
+            <div class="grid__image-small">
+              <img
+                class="grid__image-s"
+                src="images/gallery-s-3.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="grid__image-small">
+              <img
+                class="grid__image-s"
+                src="images/gallery-s-4.jpg"
+                alt="img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__button button">SEE MORE</div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <script src="js/glide.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
