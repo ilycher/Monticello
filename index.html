@@ -3,220 +3,361 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/faviconk.ico"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
       crossorigin=""
     />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Monticello</title>
   </head>
   <body>
-    <header id="header" class="header">
-      <div class="header__nav-box nav-box container">
-        <div class="nav-box__icon-box">
-          <img src="images/Logo.png" alt="logo" />
-        </div>
-        <nav class="nav-box__nav">
-          <ul class="nav-box__nav-list">
-            <li class="nav-box__nav-item">
-              <a class="nav-box__link" href="#description">
-                <div class="nav-box__circle"></div>
-                <span class="nav-box__page-name">ABOUT US</span></a
+    <header class="header">
+      <nav class="navigation">
+        <svg class="logo-container">
+          <use class="logo" href="#logo"></use>
+        </svg>
+        <ul class="nav_list">
+          <li class="nav_list__item">
+            <a class="nav_list__link" href="#about-us">
+              <div class="nav_list__circle"></div>
+              about us</a
+            >
+          </li>
+          <li class="nav_list__item">
+            <a class="nav_list__link" href="#proects">
+              <div class="nav_list__circle"></div>
+              proects</a
+            >
+          </li>
+          <li class="nav_list__item">
+            <a class="nav_list__link" href="#news">
+              <div class="nav_list__circle"></div>
+              news</a
+            >
+          </li>
+          <li class="nav_list__item">
+            <a class="nav_list__link" href="#contact">
+              <div class="nav_list__circle"></div>
+              contact</a
+            >
+          </li>
+        </ul>
+        <ul class="soc-list">
+          <li class="soc-list__item soc-list__item--facebook">
+            <a class="soc-list__link" href="https://www.facebook.com/"></a>
+            <svg viewBox="0 0 24 24" width="24px" height="24px">
+              <path
+                d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"
+              />
+            </svg>
+          </li>
+          <li class="soc-list__item soc-list__item--twitter">
+            <a class="soc-list__link" href="https://twitter.com/"></a>
+            <svg width="24px" height="24px" viewBox="0 0 256 209">
+              <g>
+                <path
+                  d="M256,25.4500259 C246.580841,29.6272672 236.458451,32.4504868 225.834156,33.7202333 C236.678503,27.2198053 245.00583,16.9269929 248.927437,4.66307685 C238.779765,10.6812633 227.539325,15.0523376 215.57599,17.408298 C205.994835,7.2006971 192.34506,0.822 177.239197,0.822 C148.232605,0.822 124.716076,24.3375931 124.716076,53.3423116 C124.716076,57.4586875 125.181462,61.4673784 126.076652,65.3112644 C82.4258385,63.1210453 43.7257252,42.211429 17.821398,10.4359288 C13.3005011,18.1929938 10.710443,27.2151234 10.710443,36.8402889 C10.710443,55.061526 19.9835254,71.1374907 34.0762135,80.5557137 C25.4660961,80.2832239 17.3681846,77.9207088 10.2862577,73.9869292 C10.2825122,74.2060448 10.2825122,74.4260967 10.2825122,74.647085 C10.2825122,100.094453 28.3867003,121.322443 52.413563,126.14673 C48.0059695,127.347184 43.3661509,127.988612 38.5755734,127.988612 C35.1914554,127.988612 31.9009766,127.659938 28.694773,127.046602 C35.3777973,147.913145 54.7742053,163.097665 77.7569918,163.52185 C59.7820257,177.607983 37.1354036,186.004604 12.5289147,186.004604 C8.28987161,186.004604 4.10888474,185.75646 0,185.271409 C23.2431033,200.173139 50.8507261,208.867532 80.5109185,208.867532 C177.116529,208.867532 229.943977,128.836982 229.943977,59.4326002 C229.943977,57.1552968 229.893412,54.8901664 229.792282,52.6381454 C240.053257,45.2331635 248.958338,35.9825545 256,25.4500259"
+                ></path>
+              </g>
+            </svg>
+          </li>
+          <li class="soc-list__item soc-list__item--instagram">
+            <a class="soc-list__link" href="https://www.instagram.com/"></a>
+            <svg width="24px" height="24px" viewBox="0 0 256 256">
+              <g>
+                <path
+                  d="M127.999746,23.06353 C162.177385,23.06353 166.225393,23.1936027 179.722476,23.8094161 C192.20235,24.3789926 198.979853,26.4642218 203.490736,28.2166477 C209.464938,30.5386501 213.729395,33.3128586 218.208268,37.7917319 C222.687141,42.2706052 225.46135,46.5350617 227.782844,52.5092638 C229.535778,57.0201472 231.621007,63.7976504 232.190584,76.277016 C232.806397,89.7746075 232.93647,93.8226147 232.93647,128.000254 C232.93647,162.177893 232.806397,166.225901 232.190584,179.722984 C231.621007,192.202858 229.535778,198.980361 227.782844,203.491244 C225.46135,209.465446 222.687141,213.729903 218.208268,218.208776 C213.729395,222.687649 209.464938,225.461858 203.490736,227.783352 C198.979853,229.536286 192.20235,231.621516 179.722476,232.191092 C166.227425,232.806905 162.179418,232.936978 127.999746,232.936978 C93.8200742,232.936978 89.772067,232.806905 76.277016,232.191092 C63.7971424,231.621516 57.0196391,229.536286 52.5092638,227.783352 C46.5345536,225.461858 42.2700971,222.687649 37.7912238,218.208776 C33.3123505,213.729903 30.538142,209.465446 28.2166477,203.491244 C26.4637138,198.980361 24.3784845,192.202858 23.808908,179.723492 C23.1930946,166.225901 23.0630219,162.177893 23.0630219,128.000254 C23.0630219,93.8226147 23.1930946,89.7746075 23.808908,76.2775241 C24.3784845,63.7976504 26.4637138,57.0201472 28.2166477,52.5092638 C30.538142,46.5350617 33.3123505,42.2706052 37.7912238,37.7917319 C42.2700971,33.3128586 46.5345536,30.5386501 52.5092638,28.2166477 C57.0196391,26.4642218 63.7971424,24.3789926 76.2765079,23.8094161 C89.7740994,23.1936027 93.8221066,23.06353 127.999746,23.06353 M127.999746,0 C93.2367791,0 88.8783247,0.147348072 75.2257637,0.770274749 C61.601148,1.39218523 52.2968794,3.55566141 44.1546281,6.72008828 C35.7374966,9.99121548 28.5992446,14.3679613 21.4833489,21.483857 C14.3674532,28.5997527 9.99070739,35.7380046 6.71958019,44.1551362 C3.55515331,52.2973875 1.39167714,61.6016561 0.769766653,75.2262718 C0.146839975,88.8783247 0,93.2372872 0,128.000254 C0,162.763221 0.146839975,167.122183 0.769766653,180.774236 C1.39167714,194.398852 3.55515331,203.703121 6.71958019,211.845372 C9.99070739,220.261995 14.3674532,227.400755 21.4833489,234.516651 C28.5992446,241.632547 35.7374966,246.009293 44.1546281,249.28042 C52.2968794,252.444847 61.601148,254.608323 75.2257637,255.230233 C88.8783247,255.85316 93.2367791,256 127.999746,256 C162.762713,256 167.121675,255.85316 180.773728,255.230233 C194.398344,254.608323 203.702613,252.444847 211.844864,249.28042 C220.261995,246.009293 227.400247,241.632547 234.516143,234.516651 C241.632039,227.400755 246.008785,220.262503 249.279912,211.845372 C252.444339,203.703121 254.607815,194.398852 255.229725,180.774236 C255.852652,167.122183 256,162.763221 256,128.000254 C256,93.2372872 255.852652,88.8783247 255.229725,75.2262718 C254.607815,61.6016561 252.444339,52.2973875 249.279912,44.1551362 C246.008785,35.7380046 241.632039,28.5997527 234.516143,21.483857 C227.400247,14.3679613 220.261995,9.99121548 211.844864,6.72008828 C203.702613,3.55566141 194.398344,1.39218523 180.773728,0.770274749 C167.121675,0.147348072 162.762713,0 127.999746,0 Z M127.999746,62.2703115 C91.698262,62.2703115 62.2698034,91.69877 62.2698034,128.000254 C62.2698034,164.301738 91.698262,193.730197 127.999746,193.730197 C164.30123,193.730197 193.729689,164.301738 193.729689,128.000254 C193.729689,91.69877 164.30123,62.2703115 127.999746,62.2703115 Z M127.999746,170.667175 C104.435741,170.667175 85.3328252,151.564259 85.3328252,128.000254 C85.3328252,104.436249 104.435741,85.3333333 127.999746,85.3333333 C151.563751,85.3333333 170.666667,104.436249 170.666667,128.000254 C170.666667,151.564259 151.563751,170.667175 127.999746,170.667175 Z M211.686338,59.6734287 C211.686338,68.1566129 204.809755,75.0337031 196.326571,75.0337031 C187.843387,75.0337031 180.966297,68.1566129 180.966297,59.6734287 C180.966297,51.1902445 187.843387,44.3136624 196.326571,44.3136624 C204.809755,44.3136624 211.686338,51.1902445 211.686338,59.6734287 Z"
+                ></path>
+              </g>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides glide__slides--header">
+            <li class="glide__slide glide__slide--header">
+              <h2 class="glide__title title--header">SIMPLE & MORDERN</h2>
+              <span class="glide__subtitle subtitle--header"
+                >WE MAKE THE WORLD'S BEAUTIFUL EVERY DAY</span
               >
+              <span class="back-gradient"></span>
+              <img
+                class="img"
+                src="./images/tu-tram-pham-202263.png"
+                alt="header-img"
+              />
             </li>
-            <li class="nav-box__nav-item">
-              <a class="nav-box__link" href="#commerce">
-                <div class="nav-box__circle"></div>
-                <span class="nav-box__page-name">PROJECTS</span></a
+            <li class="glide__slide glide__slide--header">
+              <h2 class="glide__title title--header">SIMPLE & MORDERN</h2>
+              <span class="glide__subtitle subtitle--header"
+                >WE MAKE THE WORLD'S BEAUTIFUL EVERY DAY</span
               >
+              <span class="back-gradient"></span>
+              <img
+                class="img"
+                src="./images/tu-tram-pham-202263.png"
+                alt="header-img"
+              />
             </li>
-            <li class="nav-box__nav-item">
-              <a class="nav-box__link" href="#news">
-                <div class="nav-box__circle"></div>
-                <span class="nav-box__page-name">NEWS</span></a
+            <li class="glide__slide glide__slide--header">
+              <h2 class="glide__title title--header">SIMPLE & MORDERN</h2>
+              <span class="glide__subtitle subtitle--header"
+                >WE MAKE THE WORLD'S BEAUTIFUL EVERY DAY</span
               >
+              <span class="back-gradient"></span>
+              <img
+                class="img"
+                src="./images/tu-tram-pham-202263.png"
+                alt="header-img"
+              />
             </li>
-            <li class="nav-box__nav-item">
-              <a class="nav-box__link" href="#footer">
-                <div class="nav-box__circle"></div>
-                <span class="nav-box__page-name">CONTACT</span></a
+            <li class="glide__slide glide__slide--header">
+              <h2 class="glide__title title--header">SIMPLE & MORDERN</h2>
+              <span class="glide__subtitle subtitle--header"
+                >WE MAKE THE WORLD'S BEAUTIFUL EVERY DAY</span
               >
+              <span class="back-gradient"></span>
+              <img
+                class="img"
+                src="./images/tu-tram-pham-202263.png"
+                alt="header-img"
+              />
+            </li>
+            <li class="glide__slide glide__slide--header">
+              <h2 class="glide__title title--header">SIMPLE & MORDERN</h2>
+              <span class="glide__subtitle subtitle--header"
+                >WE MAKE THE WORLD'S BEAUTIFUL EVERY DAY</span
+              >
+              <span class="back-gradient"> </span>
+              <img
+                class="img"
+                src="./images/tu-tram-pham-202263.png"
+                alt="header-img"
+              />
             </li>
           </ul>
-        </nav>
-        <ul class="nav-box__icons-list">
-          <li class="nav-box__icon">
-            <a class="nav-box__ico-link" href="#">
-              <img src="images/fb-logo.png" alt="img"
-            /></a>
-          </li>
-          <li class="nav-box__icon">
-            <a class="nav-box__ico-link" href="#">
-              <img src="images/twitter-logo.png" alt="img"
-            /></a>
-          </li>
-          <li class="nav-box__icon">
-            <a class="nav-box__ico-link" href="#">
-              <img src="images/insta-logo.png" alt="img"
-            /></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="header__title-box container">
-        <ul class="header__slider-list">
-          <li id="circle-1" class="header__slider-circle active"></li>
-          <li id="circle-2" class="header__slider-circle"></li>
-          <li id="circle-3" class="header__slider-circle"></li>
-          <li id="circle-4" class="header__slider-circle"></li>
-          <li id="circle-5" class="header__slider-circle"></li>
-        </ul>
-        <h1 class="header__title">Simple & mordern</h1>
-        <h2 class="header__subtitle">
-          We make the world's beautiful every day
-        </h2>
-
-        <div id="arrow" class="header__arrow">
-          <img id="arrow-dir" src="images/arrow-down.png" alt="arrow-ico" />
         </div>
+        <div
+          class="glide__bullets glide__bullets--header"
+          data-glide-el="controls[nav]"
+        >
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
+        </div>
+      </div>
+      <div class="header__scroll scroll__wrapper">
+        <a class="scroll__link" href="#about-us"></a>
+        <svg class="scroll">
+          <g transform="translate(-180.000000, -6684.000000)">
+            <g transform="translate(56.000000, 160.000000)">
+              <path
+                d="M144,6525.39 L142.594,6524 L133.987,6532.261 L133.069,6531.38 L133.074,6531.385 L125.427,6524.045 L124,6525.414 C126.113,6527.443 132.014,6533.107 133.987,6535 C135.453,6533.594 134.024,6534.965 144,6525.39"
+              ></path>
+            </g>
+          </g>
+        </svg>
       </div>
     </header>
-    <section id="description" class="description">
-      <h2 class="description__title">WHAT WE DO</h2>
-      <div class="description__content-wrapper container">
-        <div class="description__image-box">
-          <div class="description__bg-box"></div>
-          <img
-            src="images/description-image.jpg"
-            alt="image"
-            class="description__image"
-          />
+    <!-- section -->
+    <section id="about-us" class="about-us">
+      <!-- <div class="about-us__color-block"></div>-->
+      <div class="about-us__container container">
+        <span class="devider"></span>
+        <h2 class="about-us__title title">What we do</h2>
+        <div class="about-us__content">
+          <div class="about-us__img-wrapper">
+            <img class="img" src="./images/what1.png" alt="what1.png" />
+          </div>
+          <article class="article">
+            <span class="article__uper-title">one world</span>
+            <h2 class="title article__title">Trade center</h2>
+            <p class="article__text">
+              Increasing prosperity in our lives can be accomplished by having the
+              right frame of mind. The truth is, our thoughts are very powerful.
+            </p>
+            <button class="button article__button">more details</button>
+            <div class="location">
+              <svg height="15" viewBox="0 0 512 512" width="15">
+                <g>
+                  <path
+                    d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"
+                  />
+                </g>
+              </svg>
+              <span class="location__text"
+                >New York City, United States - 1776 feet</span
+              >
+            </div>
+          </article>
         </div>
-        <div class="description__content-box content-box">
-          <span class="content-box__content-subtitle">ONE WORLD</span>
-          <h2 class="content-box__content-title">Trade Center</h2>
-          <span class="content-box__text"
-            >Increasing prosperity in our lives can be accomplished by having
-            the right frame of mind. The truth is, our thoughts are very
-            powerful.</span
-          >
-          <div class="content-box__button button">MORE DETAILS</div>
-          <div class="content-box-ico-wrapper">
-            <img
-              src="images/description-ico.png"
-              alt=""
-              class="content-box__ico"
-            />
-            <span class="content-box__location"
-              >New York City, United States - 1776 feet</span
-            >
+      </div>
+      <div class="about-us__container container">
+        <div class="about-us__content">
+          <article class="article">
+            <span class="article__uper-title">INTERNATIONAL </span>
+            <h2 class="title article__title">COMMERCE CENTRE</h2>
+            <p class="article__text">
+              Successful businesses have many things in common, today we’ll look at
+              the big ‘R’ of recognition and how a digital advertising network may
+              help.
+            </p>
+            <button class="button article__button">more details</button>
+            <div class="location">
+              <svg height="15" viewBox="0 0 512 512" width="15">
+                <g>
+                  <path
+                    d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"
+                  />
+                </g>
+              </svg>
+    
+              <span class="location__text">Hong Kong - 1588 Feet</span>
+            </div>
+          </article>
+          <div class="about-us__img-wrapper">
+            <img class="img" src="./images/what2.png" alt="what2.png" />
           </div>
         </div>
       </div>
     </section>
-    <section id="commerce" class="commerce">
-      <div class="commerce__box container">
-        <div class="commerce__content-box content-box">
-          <span class="content-box__content-subtitle">INTERNATIONAL</span>
-          <h2 class="content-box__content-title">COMMERCE CENTRE</h2>
-          <span class="content-box__text"
-            >Successful businesses have many things in common, today we’ll look
-            at the big ‘R’ of recognition and how a digital advertising network
-            may help.</span
-          >
-          <div class="content-box__button button">MORE DETAILS</div>
-          <div class="content-box-ico-wrapper">
-            <img
-              src="images/description-ico.png"
-              alt=""
-              class="content-box__ico"
-            />
-            <span class="content-box__location">Hong Kong - 1588 Feet</span>
-          </div>
-        </div>
-        <div class="commerce__image-box">
-          <div class="commerce__bg-box"></div>
-          <img
-            src="images/commerce-bg.jpg"
-            alt="image"
-            class="commerce__image"
-          />
-        </div>
+    <!-- section -->
+    <section id="news" class="latest-news">
+      <div class="latest-news__header">
+        <span class="devider latest-news__devider"></span>
+        <h2 class="title latest-news__title">Latest news</h2>
       </div>
-    </section>
-    <section id="news" class="news">
-      <h2 class="news__main-title">LATEST NEWS</h2>
-      <div class="glide slider__glide container">
+      <div class="glide2">
         <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <div class="glide__slide-info slide-info">
-                <img
-                  src="images/news-1.jpg"
-                  alt="slide-image"
-                  class="slide-info__image"
-                />
-                <h2 class="slide-info__title">
-                  See The Unmatched Beauty Of The Great.
-                </h2>
-                <span class="slide-info__text"
-                  >Free directories: directories are perfect for customers that
-                  are... searching for</span
-                >
-                <div class="slide-info__profile-box">
-                  <img src="images/news-ico-1.png" alt="profile-ico" />
-                  <div class="slide-info__name-box">
-                    <h2 class="slide-info__name">ISAAC DUNN</h2>
-                    <span class="slide-info__date">09 Feb 2017</span>
+          <ul class="glide__slides glide__slides--latest-news">
+            <li class="glide__slide glide__slide--latest-news">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img class="img" src="./images/Clip1.png" alt="" />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">
+                    SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                  </h3>
+                  <p class="card__text">
+                    Free directories: directories are perfect for customers that
+                    are... searching for
+                  </p>
+                  <div class="card__autor-block">
+                    <div class="card__autor-photo">
+                      <img src="./images/autor1.png" alt="" />
+                    </div>
+                    <div class="card__autor-info">
+                      <span class="card__autor-name">ISAAC DUNN</span>
+                      <span class="card__post-date">09 Feb 2017</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="glide__slide">
-              <div class="glide__slide-info slide-info">
-                <img
-                  src="images/news-2.jpg"
-                  alt="slide-image"
-                  class="slide-info__image"
-                />
-                <h2 class="slide-info__title">
-                  Effective Advertising Pointers.
-                </h2>
-                <span class="slide-info__text"
-                  >Having a home based business is a wonderful asset to your
-                  life...
-                </span>
-                <div class="slide-info__profile-box">
-                  <img src="images/new-ico-2.png" alt="profile-ico" />
-                  <div class="slide-info__name-box">
-                    <h2 class="slide-info__name">Dominic Freeman</h2>
-                    <span class="slide-info__date">24 Apr 2017</span>
+            <li class="glide__slide glide__slide--latest-news">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img class="img" src="./images/Clip2.png" alt="" />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Lorem ipsum dolor sit.</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                    quae.
+                  </p>
+                  <div class="card__autor-block">
+                    <div class="card__autor-photo">
+                      <img src="./images/autor2.png" alt="" />
+                    </div>
+                    <div class="card__autor-info">
+                      <span class="card__autor-name">DOMINIC FREEMAN</span>
+                      <span class="card__post-date">24 Apr 2017</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="glide__slide">
-              <div class="glide__slide-info slide-info">
-                <img
-                  src="images/news-3.jpg"
-                  alt="slide-image"
-                  class="slide-info__image"
-                />
-                <h2 class="slide-info__title">
-                  Hypnotize Yourself Into The Ghost.
-                </h2>
-                <span class="slide-info__text"
-                  >There are many things that are important to catalog
-                  design....
-                </span>
-                <div class="slide-info__profile-box">
-                  <img src="images/news-ico-3.png" alt="profile-ico" />
-                  <div class="slide-info__name-box">
-                    <h2 class="slide-info__name">Alice Ward</h2>
-                    <span class="slide-info__date">30 Dec 2017</span>
+            <li class="glide__slide glide__slide--latest-news">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img class="img" src="./images/Clip3.png" alt="" />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Lorem ipsum dolor sit.</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                    quae.
+                  </p>
+                  <div class="card__autor-block">
+                    <div class="card__autor-photo">
+                      <img src="./images/autor3.png" alt="" />
+                    </div>
+                    <div class="card__autor-info">
+                      <span class="card__autor-name">ALICE WARD</span>
+                      <span class="card__post-date">30 Dec 2017</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide glide__slide--latest-news">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img class="img" src="./images/Clip2.png" alt="" />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Lorem ipsum dolor sit.</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                    quae.
+                  </p>
+                  <div class="card__autor-block">
+                    <div class="card__autor-photo">
+                      <img src="./images/autor2.png" alt="" />
+                    </div>
+                    <div class="card__autor-info">
+                      <span class="card__autor-name">Lorem ipsum</span>
+                      <span class="card__post-date">10.06.2016</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide glide__slide--latest-news">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img class="img" src="./images/Clip1.png" alt="" />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Lorem ipsum dolor sit.</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                    quae.
+                  </p>
+                  <div class="card__autor-block">
+                    <div class="card__autor-photo">
+                      <img src="./images/autor1.png" alt="" />
+                    </div>
+                    <div class="card__autor-info">
+                      <span class="card__autor-name">Lorem ipsum</span>
+                      <span class="card__post-date">10.06.2016</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -224,79 +365,172 @@
           </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-          <div class="glide__arrow glide__arrow--left" v data-glide-dir="<">
-            <img src="images/arrow-down.png" alt="arrow-ico" />
-          </div>
-          <div class="glide__arrows" data-glide-el="controls">
-            <div class="glide__arrow glide__arrow--right" v data-glide-dir=">">
-              <img src="images/arrow-down.png" alt="arrow-ico" />
-            </div>
-          </div>
-          <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-          </div>
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            prev
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            next
+          </button>
+        </div>
+        <div
+          class="glide__bullets glide__bullets--latest-news"
+          data-glide-el="controls[nav]"
+        >
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
         </div>
       </div>
     </section>
-    <section id="gallery" class="gallery">
-      <h2 class="gallery__title">GALLERY</h2>
-      <div class="gallery__grid grid">
-        <div class="grid__big-img">
-          <img
-            class="grid__big-image"
-            src="images/gallery-big.jpg"
-            alt="image"
-          />
+    <!-- section -->
+    <section id="proects" class="section-gallery">
+      <span class="devider section-gallery__devider"></span>
+      <h2 class="title section-gallery__title">gallery</h2>
+      <div class="gallery">
+        <div class="coll coll--big">
+          <img class="img" src="./images/galery-main.png" alt="galery-main.png" />
+          <img class="gallery__360" src="./images/360.png" alt="360.png" />
         </div>
-        <div class="grid__big-box">
-          <div class="grid__row">
-            <div class="grid__image-small">
-              <img
-                class="grid__image-s"
-                src="images/gallery-s-1.jpg"
-                alt="img"
-              />
+        <div class="coll">
+          <div class="row">
+            <div class="coll coll--small">
+              <img class="img" src="./images/galery1.png" alt="galery1.png" />
             </div>
-            <div class="grid__image-small">
-              <img
-                class="grid__image-s"
-                src="images/gallery-s-2.jpg"
-                alt="img"
-              />
+            <div class="coll coll--small">
+              <img class="img" src="./images/galery2.png" alt="galery2.png" />
             </div>
           </div>
-          <div class="grid__row">
-            <div class="grid__image-small">
-              <img
-                class="grid__image-s"
-                src="images/gallery-s-3.jpg"
-                alt="img"
-              />
+          <div class="row">
+            <div class="coll coll--small">
+              <img class="img" src="./images/galery3.png" alt="galery3.png" />
             </div>
-            <div class="grid__image-small">
-              <img
-                class="grid__image-s"
-                src="images/gallery-s-4.jpg"
-                alt="img"
-              />
+            <div class="coll coll--small">
+              <img class="img" src="./images/galery4.png" alt="galery4.png" />
             </div>
           </div>
         </div>
       </div>
-      <div class="gallery__button button">SEE MORE</div>
+      <button class="button section-gallery__button">see more</button>
     </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script
-      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin=""
-    ></script>
-    <script src="js/glide.js"></script>
-    <script src="js/main.js"></script>
+    <!-- section -->
+    <div class="form__container">
+      <form class="form">
+        <span class="devider form__devider"></span>
+        <h2 class="title form__title">get in touch</h2>
+        <div class="form__main">
+          <ul class="form__info-list">
+            <li class="form__info-item">
+              <svg height="15" viewBox="0 0 512 512" width="15" fill="#8461FD">
+                <g>
+                  <path
+                    d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"
+                  />
+                </g>
+              </svg>
+              <span class="form__text">91 Nolan Extensions Suite 670</span>
+            </li>
+            <li class="form__info-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#8461FD">
+                <path
+                  d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"
+                />
+              </svg>
+              <span class="form__text">+001 356-868-2454 </span>
+            </li>
+            <li class="form__info-item">
+              <svg fill="#8461FD" width="15" height="15" viewBox="0 0 24 24">
+                <path
+                  d="M18.546 1h-13.069l-5.477 8.986v13.014h24v-13.014l-5.454-8.986zm-11.946 2h10.82l3.642 6h-4.476l-3 3h-3.172l-3-3h-4.471l3.657-6zm15.4 18h-20v-10h4.586l3 3h4.828l3-3h4.586v10z"
+                />
+              </svg>
+              <span class="form__text">gahuy93@gmail.com</span>
+            </li>
+            <li class="form__info-item">
+              <svg fill="#8461FD" width="15" height="15" viewBox="0 0 24 24">
+                <path
+                  d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z"
+                />
+              </svg>
+              <span class="form__text">From 07:05AM to 19:30PM</span>
+            </li>
+          </ul>
+          <div class="form__inputs">
+            <input
+              class="form__input"
+              name="phone"
+              type="number"
+              placeholder="Mollie Medina"
+              required
+            />
+            <input
+              class="form__input"
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <div class="form__button-wrapper">
+              <button class="button form__button">submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- section -->
+    <div id="mapid"></div>
+    <!-- section -->
+    <div class="footer">
+      <img class="img footer__img" src="./images/footer.png" alt="footer.png" />
+      <div class="footer__content">
+        <svg class="logo-container">
+          <use class="logo" href="#logo"></use>
+        </svg>
+        <ul class="soc-list">
+          <li class="soc-list__item soc-list__item--facebook">
+            <a class="soc-list__link" href="https://www.facebook.com/"></a>
+            <svg viewBox="0 0 24 24" width="24px" height="24px">
+              <path
+                d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"
+              />
+            </svg>
+          </li>
+          <li class="soc-list__item soc-list__item--twitter">
+            <a class="soc-list__link" href="https://twitter.com/"></a>
+            <svg width="24px" height="24px" viewBox="0 0 256 209">
+              <g>
+                <path
+                  d="M256,25.4500259 C246.580841,29.6272672 236.458451,32.4504868 225.834156,33.7202333 C236.678503,27.2198053 245.00583,16.9269929 248.927437,4.66307685 C238.779765,10.6812633 227.539325,15.0523376 215.57599,17.408298 C205.994835,7.2006971 192.34506,0.822 177.239197,0.822 C148.232605,0.822 124.716076,24.3375931 124.716076,53.3423116 C124.716076,57.4586875 125.181462,61.4673784 126.076652,65.3112644 C82.4258385,63.1210453 43.7257252,42.211429 17.821398,10.4359288 C13.3005011,18.1929938 10.710443,27.2151234 10.710443,36.8402889 C10.710443,55.061526 19.9835254,71.1374907 34.0762135,80.5557137 C25.4660961,80.2832239 17.3681846,77.9207088 10.2862577,73.9869292 C10.2825122,74.2060448 10.2825122,74.4260967 10.2825122,74.647085 C10.2825122,100.094453 28.3867003,121.322443 52.413563,126.14673 C48.0059695,127.347184 43.3661509,127.988612 38.5755734,127.988612 C35.1914554,127.988612 31.9009766,127.659938 28.694773,127.046602 C35.3777973,147.913145 54.7742053,163.097665 77.7569918,163.52185 C59.7820257,177.607983 37.1354036,186.004604 12.5289147,186.004604 C8.28987161,186.004604 4.10888474,185.75646 0,185.271409 C23.2431033,200.173139 50.8507261,208.867532 80.5109185,208.867532 C177.116529,208.867532 229.943977,128.836982 229.943977,59.4326002 C229.943977,57.1552968 229.893412,54.8901664 229.792282,52.6381454 C240.053257,45.2331635 248.958338,35.9825545 256,25.4500259"
+                ></path>
+              </g>
+            </svg>
+          </li>
+          <li class="soc-list__item soc-list__item--instagram">
+            <a class="soc-list__link" href="https://www.instagram.com/"></a>
+            <svg width="24px" height="24px" viewBox="0 0 256 256">
+              <g>
+                <path
+                  d="M127.999746,23.06353 C162.177385,23.06353 166.225393,23.1936027 179.722476,23.8094161 C192.20235,24.3789926 198.979853,26.4642218 203.490736,28.2166477 C209.464938,30.5386501 213.729395,33.3128586 218.208268,37.7917319 C222.687141,42.2706052 225.46135,46.5350617 227.782844,52.5092638 C229.535778,57.0201472 231.621007,63.7976504 232.190584,76.277016 C232.806397,89.7746075 232.93647,93.8226147 232.93647,128.000254 C232.93647,162.177893 232.806397,166.225901 232.190584,179.722984 C231.621007,192.202858 229.535778,198.980361 227.782844,203.491244 C225.46135,209.465446 222.687141,213.729903 218.208268,218.208776 C213.729395,222.687649 209.464938,225.461858 203.490736,227.783352 C198.979853,229.536286 192.20235,231.621516 179.722476,232.191092 C166.227425,232.806905 162.179418,232.936978 127.999746,232.936978 C93.8200742,232.936978 89.772067,232.806905 76.277016,232.191092 C63.7971424,231.621516 57.0196391,229.536286 52.5092638,227.783352 C46.5345536,225.461858 42.2700971,222.687649 37.7912238,218.208776 C33.3123505,213.729903 30.538142,209.465446 28.2166477,203.491244 C26.4637138,198.980361 24.3784845,192.202858 23.808908,179.723492 C23.1930946,166.225901 23.0630219,162.177893 23.0630219,128.000254 C23.0630219,93.8226147 23.1930946,89.7746075 23.808908,76.2775241 C24.3784845,63.7976504 26.4637138,57.0201472 28.2166477,52.5092638 C30.538142,46.5350617 33.3123505,42.2706052 37.7912238,37.7917319 C42.2700971,33.3128586 46.5345536,30.5386501 52.5092638,28.2166477 C57.0196391,26.4642218 63.7971424,24.3789926 76.2765079,23.8094161 C89.7740994,23.1936027 93.8221066,23.06353 127.999746,23.06353 M127.999746,0 C93.2367791,0 88.8783247,0.147348072 75.2257637,0.770274749 C61.601148,1.39218523 52.2968794,3.55566141 44.1546281,6.72008828 C35.7374966,9.99121548 28.5992446,14.3679613 21.4833489,21.483857 C14.3674532,28.5997527 9.99070739,35.7380046 6.71958019,44.1551362 C3.55515331,52.2973875 1.39167714,61.6016561 0.769766653,75.2262718 C0.146839975,88.8783247 0,93.2372872 0,128.000254 C0,162.763221 0.146839975,167.122183 0.769766653,180.774236 C1.39167714,194.398852 3.55515331,203.703121 6.71958019,211.845372 C9.99070739,220.261995 14.3674532,227.400755 21.4833489,234.516651 C28.5992446,241.632547 35.7374966,246.009293 44.1546281,249.28042 C52.2968794,252.444847 61.601148,254.608323 75.2257637,255.230233 C88.8783247,255.85316 93.2367791,256 127.999746,256 C162.762713,256 167.121675,255.85316 180.773728,255.230233 C194.398344,254.608323 203.702613,252.444847 211.844864,249.28042 C220.261995,246.009293 227.400247,241.632547 234.516143,234.516651 C241.632039,227.400755 246.008785,220.262503 249.279912,211.845372 C252.444339,203.703121 254.607815,194.398852 255.229725,180.774236 C255.852652,167.122183 256,162.763221 256,128.000254 C256,93.2372872 255.852652,88.8783247 255.229725,75.2262718 C254.607815,61.6016561 252.444339,52.2973875 249.279912,44.1551362 C246.008785,35.7380046 241.632039,28.5997527 234.516143,21.483857 C227.400247,14.3679613 220.261995,9.99121548 211.844864,6.72008828 C203.702613,3.55566141 194.398344,1.39218523 180.773728,0.770274749 C167.121675,0.147348072 162.762713,0 127.999746,0 Z M127.999746,62.2703115 C91.698262,62.2703115 62.2698034,91.69877 62.2698034,128.000254 C62.2698034,164.301738 91.698262,193.730197 127.999746,193.730197 C164.30123,193.730197 193.729689,164.301738 193.729689,128.000254 C193.729689,91.69877 164.30123,62.2703115 127.999746,62.2703115 Z M127.999746,170.667175 C104.435741,170.667175 85.3328252,151.564259 85.3328252,128.000254 C85.3328252,104.436249 104.435741,85.3333333 127.999746,85.3333333 C151.563751,85.3333333 170.666667,104.436249 170.666667,128.000254 C170.666667,151.564259 151.563751,170.667175 127.999746,170.667175 Z M211.686338,59.6734287 C211.686338,68.1566129 204.809755,75.0337031 196.326571,75.0337031 C187.843387,75.0337031 180.966297,68.1566129 180.966297,59.6734287 C180.966297,51.1902445 187.843387,44.3136624 196.326571,44.3136624 C204.809755,44.3136624 211.686338,51.1902445 211.686338,59.6734287 Z"
+                ></path>
+              </g>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copy">
+        <span class="footer__text">Copyrights © 2017 Monticello</span
+        ><span class="footer__text">Made with by Ga Huy</span>
+      </div>
+    </div>
   </body>
+  <svg style="display: none;">
+    <symbol id="logo">
+      <path
+        d="M237.919,101.4l28.619-.252-20.555-35.19-16.792,29.93-4.52.04,19.305-33.566-3.229-5.527L215,101.6l17.439-.153L246.08,77.136l10.81,18.508-16.649.146Zm44.757,5.589L251.367,53.225l0.37-.219,31.31,53.763Zm2.808-33.178V73.759a9.528,9.528,0,0,1,19.055-.052v0.052A9.528,9.528,0,0,1,285.484,73.811Zm14.051,0V73.759a4.672,4.672,0,0,0-4.549-4.912,4.582,4.582,0,0,0-4.473,4.859v0.052a4.667,4.667,0,0,0,4.524,4.912A4.586,4.586,0,0,0,299.535,73.811Zm10.089-9.147H314.2l7.278,9.615V64.664h4.852V82.854h-4.3l-7.556-9.979v9.979h-4.852V64.664Zm26.691,4.418h-5.307V64.664h15.517v4.418h-5.307V82.854h-4.9V69.081Zm14.99-4.418h4.929V82.854h-4.929V64.664Zm10.086,9.147V73.759a9.216,9.216,0,0,1,9.325-9.459,8.589,8.589,0,0,1,7.506,3.794l-3.69,2.936a4.7,4.7,0,0,0-3.866-2.131c-2.476,0-4.22,2.157-4.22,4.807v0.052c0,2.729,1.744,4.86,4.22,4.86a4.8,4.8,0,0,0,3.993-2.209l3.69,2.7a8.857,8.857,0,0,1-7.835,4.106A9.112,9.112,0,0,1,361.391,73.811Zm21.586-9.147h14.229v4.288H387.83v2.754h8.491v3.976H387.83v2.885h9.5v4.288H382.977V64.664Zm19.388,0h4.9V78.437h8.567v4.418h-13.47V64.664Zm18.1,0h4.9V78.437h8.568v4.418h-13.47V64.664Zm16.481,9.147V73.759A9.528,9.528,0,0,1,456,73.707v0.052A9.528,9.528,0,0,1,436.945,73.811Zm14.051,0V73.759a4.672,4.672,0,0,0-4.549-4.912,4.582,4.582,0,0,0-4.473,4.859v0.052a4.667,4.667,0,0,0,4.524,4.912A4.586,4.586,0,0,0,451,73.811ZM266.424,78.482V72.459l4.5,7.069h0.1l4.524-7.121V82.854h4.877V64.664h-5.181l-4.22,7.042-4.22-7.042h-5.181v5.574Zm20.07,14.225h0.678v6.061h-0.678V92.707Zm5.875,0h0.636l3.786,4.857V92.707h0.661v6.061h-0.541L293.03,93.8v4.97h-0.661V92.707Zm11.811,0.631h-2.018V92.707h4.722v0.631h-2.018v5.429H304.18V93.338Zm7.414-.631h4.345V93.33h-3.666V95.4h3.279v0.623h-3.279v2.121h3.708v0.624h-4.387V92.707Zm9.191,0h2.585a2.358,2.358,0,0,1,1.708.606,1.685,1.685,0,0,1,.463,1.194v0.017a1.767,1.767,0,0,1-1.63,1.766l1.845,2.477h-0.833l-1.742-2.355h-1.717v2.355h-0.679V92.707Zm2.524,3.091a1.335,1.335,0,0,0,1.545-1.246V94.533a1.279,1.279,0,0,0-1.536-1.2h-1.854V95.8h1.845Zm7.123-3.091h0.636l3.786,4.857V92.707h0.661v6.061h-0.541l-3.881-4.97v4.97h-0.661V92.707Zm12.446-.044h0.635l2.739,6.1h-0.73l-0.7-1.6h-3.271l-0.713,1.6h-0.695Zm1.674,3.888-1.365-3.092-1.374,3.092h2.739Zm7.14-3.213h-2.018V92.707H354.4v0.631h-2.018v5.429h-0.686V93.338Zm7.475-.631h0.677v6.061h-0.677V92.707Zm5.609,3.047V95.737a3.066,3.066,0,1,1,6.13-.018v0.018A3.066,3.066,0,1,1,364.776,95.754Zm5.426,0V95.737a2.4,2.4,0,0,0-2.37-2.5,2.372,2.372,0,0,0-2.352,2.485v0.018a2.4,2.4,0,0,0,2.37,2.5A2.372,2.372,0,0,0,370.2,95.754Zm5.577-3.047h0.636l3.786,4.857V92.707h0.661v6.061h-0.541L376.44,93.8v4.97h-0.661V92.707Zm12.446-.044h0.636l2.738,6.1H390.87l-0.7-1.6H386.9l-0.713,1.6h-0.695Zm1.675,3.888-1.366-3.092-1.373,3.092H389.9Zm6.324-3.844H396.9v5.428h3.382v0.633h-4.061V92.707Zm14.5,3.047V95.737a3.03,3.03,0,0,1,3.013-3.135,3.146,3.146,0,0,1,2.24.806l-0.437.519a2.549,2.549,0,0,0-1.828-.692,2.359,2.359,0,0,0-2.285,2.485v0.018a2.334,2.334,0,0,0,2.379,2.519,2.817,2.817,0,0,0,1.734-.606V96.143h-1.828V95.529h2.48v2.415a3.621,3.621,0,0,1-2.413.926A2.959,2.959,0,0,1,410.725,95.754Zm10.436-3.047h2.585a2.358,2.358,0,0,1,1.708.606,1.682,1.682,0,0,1,.464,1.194v0.017a1.767,1.767,0,0,1-1.631,1.766l1.845,2.477H425.3l-1.742-2.355H421.84v2.355h-0.679V92.707Zm2.524,3.091a1.336,1.336,0,0,0,1.546-1.246V94.533a1.28,1.28,0,0,0-1.537-1.2H421.84V95.8h1.845Zm6.857-.044V95.737a3.065,3.065,0,1,1,6.129-.018v0.018A3.065,3.065,0,1,1,430.542,95.754Zm5.425,0V95.737a2.4,2.4,0,0,0-2.369-2.5,2.372,2.372,0,0,0-2.353,2.485v0.018a2.4,2.4,0,0,0,2.37,2.5A2.372,2.372,0,0,0,435.967,95.754Zm5.484,0.476V92.707h0.678v3.48a1.777,1.777,0,0,0,1.837,2.043,1.736,1.736,0,0,0,1.812-2V92.707h0.678v3.472A2.507,2.507,0,1,1,441.451,96.231Zm10.05-3.523h2.25A1.961,1.961,0,0,1,456,94.629v0.017a2.078,2.078,0,0,1-2.361,1.983H452.18v2.139H451.5V92.707Zm2.164,3.3a1.429,1.429,0,0,0,1.648-1.334V94.655a1.362,1.362,0,0,0-1.614-1.316H452.18V96h1.485Z"
+        transform="translate(-215 -53)"
+      />
+    </symbol>
+  </svg>
+  <script src="./js/main.js"></script>
 </html>
